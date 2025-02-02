@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "Weather_react_backend": {
+      "main": "src/Weather_react_backend/main.mo",
+      "type": "motoko"
+    },
+    "Weather_react_frontend": {
+      "dependencies": [
+        "Weather_react_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/Weather_react_frontend/src/index.html"
+      },
+      "source": [
+        "src/Weather_react_frontend/assets",
+        "dist/Weather_react_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
