@@ -28,7 +28,7 @@ dfx canister --help
 If you want to test your project locally, you can use the following commands:
 ```bash
 #first copy all file to your project directory
-git clone https://github.com/rishu0511/diarys.git
+git clone https://github.com/rishu0511/Weather_react.git
 # cd over the project
 cd diarys
 # install all module
