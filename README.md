@@ -42,6 +42,13 @@ dfx start --background
 # Deploys your canisters to the replica and generates your candid interface
 dfx deploy
 ```
+If you are making frontend changes, you can start a development server with
+
+```bash
+npm start
+```
+
+Which will start a server at `http://localhost:8080`, proxying API requests to the replica at port 4943.
 
 Once the job completes, your application will be available at `http://localhost:4943?canisterId={asset_canister_id}`.
 
@@ -53,13 +60,7 @@ npm run generate
 
 at any time. This is recommended before starting the frontend development server, and will be run automatically any time you run `dfx deploy`.
 
-If you are making frontend changes, you can start a development server with
 
-```bash
-npm start
-```
-
-Which will start a server at `http://localhost:8080`, proxying API requests to the replica at port 4943.
 
 ### Note on frontend environment variables
 
