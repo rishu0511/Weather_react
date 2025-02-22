@@ -26,6 +26,14 @@ dfx canister --help
 ## Running the project locally
 
 If you want to test your project locally, you can use the following commands:
+```bash
+#first copy all file to your project directory
+git clone https://github.com/rishu0511/diarys.git
+# cd over the project
+cd diarys
+# install all module
+npm install 
+```
 
 ```bash
 # Starts the replica, running in the background
