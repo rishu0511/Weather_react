@@ -5,10 +5,11 @@ export default function Canvasc(props) {
   const [Width, setwidth] = useState(0);
   const [Height, setHeight] = useState(0);
   const [count, setCount] = useState(0);
-
   useEffect(() => {
     const canvas = canvasRef.current;
     const context = canvas.getContext("2d");
+    const date = new Date();
+    const milisec = date.getMilliseconds();
     const width = window.innerWidth;
     const height = window.innerHeight;
     setwidth(width);
@@ -19,6 +20,7 @@ export default function Canvasc(props) {
     // Fill rectangle with gradient
     context.fillStyle = grad;
     context.fillRect(1, 1, width - 20, 600);
+    if (canvasRef == null) return;
     drawStarr(width - 1300 + props.COUNT, 150, 20, 85, 3, "lightblue", context);
     drawStarr(
       width - 900 + props.COUNT / 6,
@@ -53,7 +55,7 @@ export default function Canvasc(props) {
     context.font = "50px Arial";
     context.fillStyle = "skyblue";
     context.fillText(props.PLACE,900,80);
-    context.fillText(props.TEMP+" C",900,500);
+    context.fillText(props.TEMP+" °C",900,500);
     context.fillText(props.DESCRIPT,200,500);
   });
   function drawStarr(x, y, radius, radius_c, sides, fillColor, ctx) {
@@ -74,6 +76,5 @@ export default function Canvasc(props) {
     ctx.closePath();
     if (fillColor) ctx.fill();
   }
-
-  return <canvas ref={canvasRef} width={Width} height={600} />;
+  return <canvas ref={canvasRef} width={Width-16} height={600} />;
 }

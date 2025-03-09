@@ -6,10 +6,12 @@ import Canvasb from "./box_can.jsx";
 import Canvasimg from "./can_img.jsx";
 import Canvascimg from "./can_cutimg.jsx";
 import Clock from "./clock.jsx";
+import CanvasReal from "./real_clock.jsx"
+import Canvasr from "./canvas_r.jsx"
 export default function App() {
     const [place, setplace] = useState("")
-    const[lat,setlat] = useState(0)
-    const[lon,setlon] = useState(0)
+    const [lat,setlat] = useState(0)
+    const [lon,setlon] = useState(0)
     const [weath,setweath] = useState(0)
     const [tem_max,setmax] = useState(0)
     const [tem_min,setmin] = useState('')
@@ -52,8 +54,15 @@ export default function App() {
                 setdesc(element.main)
             }
         }):""
+        const d = new Date(data.dt*1000);
+        const date = d.toUTCString();
+        const DDte= String(date);
+        const now= new Date(DDte);
+        const min = now.getMinutes();
+        const hr = now.getHours() % 24;
         console.log(data)
-        console.log()
+        console.log(hr)
+        console.log(min)
     }
     return(
     <div class="canvas">
@@ -74,6 +83,7 @@ export default function App() {
             <p class="para">Longitude : {lon}°</p>
             <p class="para">Sea level : {slevel} meter</p>
             <p class="last_p">Wind flowing degree : {deg}°</p>
+            <CanvasReal/>
         </div>
     </div>
 )}

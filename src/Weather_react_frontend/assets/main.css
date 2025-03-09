@@ -34,8 +34,9 @@ button:hover {
   flex-direction: row;
   justify-content: left;
   flex-wrap: wrap;
+  align-items: center;
   width:100%;
-  height:100px;
+  height:160px;
   background-color: #4A628A;
 }
 .para{
@@ -43,7 +44,6 @@ button:hover {
   display: flex;
   justify-content: center;
   top :0;
-  left:20p;
   width:250px;
   font-size: 25px;
   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -54,6 +54,9 @@ button:hover {
   display: flex;
   justify-content: space-around;
   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  width:500px;
+  width:300px;
   font-size: 25px;
+}
+.rain_c{
+  background-color:#3f5986;
 }

@@ -4,12 +4,14 @@ const delay = 0.03;
 import Canvass from "./Canvas_s.jsx";
 import Canvasc from "./canvas_c.jsx";
 import Canvasf from "./canvas_f.jsx"
+import Canvasr from "./canvas_r.jsx"
 export default function Canvas(props) {
   const [counter, setCounter] = useState(100);
   const timer = useRef(null);
   const [sunny, setsunny] = useState(false);
   const [cloud, setcloud] = useState(false);
   const [fog, setfog] = useState(false);
+  const [rain, setrain] = useState(false);
   // we can save timer in useRef and pass it to child
   useEffect(() => {
     // useRef value stored in .current property
@@ -22,18 +24,22 @@ export default function Canvas(props) {
   }, []);
   useEffect(() => {
     if (props.DESCRIPT === "Clear") {
+      setrain(false)
       setfog(true);
       setcloud(false);
       setsunny(false);
     } else if (props.DESCRIPT === "Clouds") {
+      setrain(false)
       setcloud(true);
       setfog(false);
       setsunny(false);
     } else if (props.DESCRIPT === "Rain") {
-      setcloud(true);
+      setcloud(false);
       setfog(false);
       setsunny(false);
+      setrain(true)
     }else {
+      setrain(false)
       setsunny(true);
       setcloud(false);
       setfog(false);
@@ -46,6 +52,7 @@ export default function Canvas(props) {
       {sunny ? <Canvass COUNT={counter} PLACE={props.PLACE} TEMP ={props.TEMP} DESCRIPT={props.DES}/> : null}
       {cloud ? <Canvasc COUNT={counter} PLACE={props.PLACE} TEMP ={props.TEMP} DESCRIPT={props.DES}/> : null}
       {fog ? <Canvasf COUNT={counter} PLACE={props.PLACE} TEMP ={props.TEMP} DESCRIPT={props.DES}/> : null}
+      {rain? <div class = "rain_c"><Canvasr COUNT={counter} PLACE={props.PLACE} TEMP ={props.TEMP} DESCRIPT={props.DES}/> </div>: null}
     </div>
   );
 }

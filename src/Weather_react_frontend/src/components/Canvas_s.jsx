@@ -30,9 +30,9 @@ export default function Canvass(props) {
     context.font = "50px Arial";
     context.fillStyle = "black";
     context.fillText(props.PLACE,900,80);
-    context.fillText(props.TEMP+" C",900,500);
+    context.fillText(props.TEMP+" °C",900,500);
     context.fillText(props.DESCRIPT,200,500);
   });
 
-  return <canvas ref={canvasRef} width={Width} height={600} />;
+  return <canvas ref={canvasRef} width={Width-16} height={600} />;
 }
