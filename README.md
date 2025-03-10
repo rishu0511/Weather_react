@@ -24,7 +24,8 @@ dfx canister --help
 ```
 
 ## Running the project locally
-
+First of all you have to change appid in Weather_react_frontend/src/components
+/fetch.jsx(line no 58) by taking apikey from https://home.openweathermap.org/api_keys (first you have to singup there then you will get apikey)
 If you want to test your project locally, you can use the following commands:
 ```bash
 #first copy all file to your project directory
