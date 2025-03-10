@@ -2,6 +2,7 @@
 ![Uploading Screenshot (48).png…]()
 ![Uploading Screenshot (49).png…]()
 ![Uploading Screenshot (50).png…]()
+![Screenshot (49) 1](https://github.com/user-attachments/assets/28e72360-e53d-4a22-b491-40b7e908ca1f)
 # Weather_react
 
 Welcome to your new Weather_react project and to the internet computer development community. By default, creating a new project adds this README and some template files to your project directory. You can edit these template files to customize your project and to include your own code to speed up the development cycle.
