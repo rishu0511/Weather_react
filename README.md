@@ -1,6 +1,8 @@
 ## Front Page
 ![Screenshot (52) 1](https://github.com/user-attachments/assets/813a3f0e-56b5-4c27-a22c-6237eeea6714)
+### Bottom right watch is showing realtime(animated) temprature (max,min) showing real sunrise and sunset as well
 ![Screenshot (51) 1](https://github.com/user-attachments/assets/e43192fd-bdc7-4c45-95fb-53c2183c0511)
+### Rain is animated
 ![Screenshot (53) 1](https://github.com/user-attachments/assets/7c19004f-2127-4d0d-be61-55a9b0cf4999)
 
 # Weather_react
